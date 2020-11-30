@@ -4,7 +4,7 @@ function submitData(name, email) {
         name: name,
         email: email
     };
-       
+
     let configObj = {
         method: "POST",
         headers: {
@@ -13,7 +13,7 @@ function submitData(name, email) {
         },
         body: JSON.stringify(formData)
     };
-       
+
     return fetch("http://localhost:3000/users", configObj)
         .then(function(response) {
           return response.json();
